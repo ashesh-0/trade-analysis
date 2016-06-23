@@ -1,4 +1,4 @@
-
+# trade-analysis
 A simple python framework to analyze trade execution
 
 Points to note:
@@ -8,3 +8,4 @@ Points to note:
 4. B should be for Buy and S for Sell.
 5. starttime is hhmmss in UTC time zone.
 6. Example command: python  execution/simulate_execution.py 20150325 VWO S 12 MeanRev 173500
+
