@@ -10,9 +10,12 @@ With trade-analysis more seasoned traders can code up their intuition and see ho
 4. Make sure pip is installed. Check if is installed by `pip -V` on linux systems. If not do the following:  
         `sudo apt-get update`  
         `sudo apt-get install python-pip`        
-5. We love  using virtualenv. It enables to work on different python projects with different versions of libraries. It is not mandatory to install. Install it from [here](https://virtualenv.pypa.io/en/stable/installation/)  
+5. We love  using virtualenv. It enables to work on different python projects with different versions of libraries. It is not mandatory to install. Install it from [here](https://virtualenv.pypa.io/en/stable/installation/). Activate it by going into trade-analysis base directory and executing following commannds:  
+        `virtualenv venv`  
+        `source venv/bin/activate`  
 6. Install the project requirements by executing `pip install -r requirements.txt`  
-7. Add to PYTHONPATH trade-analysis directory.
+7. Add to PYTHONPATH trade-analysis directory.  
+        `export PYTHONPATH=$PYTHONPATH:PATH_TO_TRADE_ANALYSIS_DIRECTORY;`
 
 ## Contribution
 We want you to contribute and make this project richer. After you have successfully installed the requirements and are ready to code, glance through the [contribution guidelines](CONTRIBUTING.md) to get the formatting and code structure related things which this project adheres to.
@@ -24,4 +27,7 @@ See the [license](LICENSE) file.
 If you want to do the analysis of a trade of selling 12 shares of etf VWO at time 5:35:00 PM UTC on 25th March 2015 using our mean reversion execution algorithm, execute the following command.  
 `python execution/simulate_execution.py 20150325 VWO S 12 MeanRev 173500`
 
-We have provided sample minute bars for different securities generated from market data of 25th March 2015. Hence for running the backtesting one can give any of the shortcodes which are present in datafiles directory. MeanRev, Momentum and Direct are the execution algorithms provided.
+We have provided sample minute bars for different securities generated from market data of 25th March 2015. So the backtesting will work for that day alone.For running the backtesting one can give any of the shortcodes which are present in datafiles directory. Following execution algorithms can be used:  
+      * MeanRev  
+      * Momentum   
+      * Direct  
